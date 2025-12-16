@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import './Hero.scss';
 
 const Hero = () => {
@@ -29,7 +29,7 @@ const Hero = () => {
     };
   }, []);
   
-  const textVariants = {
+  const textVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 100,
@@ -42,12 +42,12 @@ const Hero = () => {
       transition: {
         duration: 0.8,
         delay,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        ease: "easeOut" as const
       }
     })
   };
   
-  const logoVariants = {
+  const logoVariants: Variants = {
     hidden: {
       opacity: 0,
       scale: 0.8,
@@ -60,7 +60,7 @@ const Hero = () => {
       transition: {
         duration: 1,
         delay: 0.2,
-        ease: [0.25, 0.46, 0.45, 0.94]
+        ease: "easeOut" as const
       }
     }
   };
