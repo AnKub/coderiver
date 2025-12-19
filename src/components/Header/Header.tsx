@@ -24,7 +24,7 @@ const ScrambleText = ({ text, className = '' }: ScrambleTextProps) => {
       setDisplayText(
         originalText
           .split('')
-          .map((char, index) => {
+          .map((_, index) => {
             if (index < iteration) {
               return originalText[index];
             }
