@@ -44,15 +44,15 @@ const Particles = () => {
       if (distance < MOUSE_RADIUS) {
         const force = (MOUSE_RADIUS - distance) / MOUSE_RADIUS;
         const angle = Math.atan2(dy, dx);
-        particle.vx -= Math.cos(angle) * force * 0.01;
-        particle.vy -= Math.sin(angle) * force * 0.01;
+        particle.vx -= Math.cos(angle) * force * 0.003;
+        particle.vy -= Math.sin(angle) * force * 0.003;
       }
       
       particle.x += particle.vx;
       particle.y += particle.vy;
       
-      particle.vx *= 0.99;
-      particle.vy *= 0.99;
+      particle.vx *= 0.995;
+      particle.vy *= 0.995;
       
       if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
       if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;

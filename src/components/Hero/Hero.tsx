@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, type Variants } from 'framer-motion';
+import Button from '../Button/Button';
 import './Hero.scss';
 
 const Hero = () => {
@@ -53,15 +54,14 @@ const Hero = () => {
     <section ref={heroRef} className="hero">
       <div className="container">
         <div className="hero__content">
-          <motion.button 
-            className="hero__button"
+          <motion.div
             variants={textVariants}
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
             custom={0.2}
           >
-            START TODAY!
-          </motion.button>
+            <Button>START TODAY!</Button>
+          </motion.div>
           
           <motion.h1 
             className="hero__title"
@@ -81,7 +81,7 @@ const Hero = () => {
             custom={0.8}
           >
             <div className="hero__arrow-circle">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 16L8 12H16L12 16Z" fill="white"/>
               </svg>
             </div>
