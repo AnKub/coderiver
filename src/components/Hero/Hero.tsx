@@ -51,10 +51,6 @@ const Hero = () => {
   
   return (
     <section ref={heroRef} className="hero">
-      <div className="hero__background">
-        <img src="/background/Юніон.png" alt="" className="hero__background-union" />
-        <img src="/background/Дата.png" alt="" className="hero__background-data" />
-      </div>
       <div className="container">
         <div className="hero__content">
           <motion.button 
@@ -86,7 +82,7 @@ const Hero = () => {
           >
             <div className="hero__arrow-circle">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 16L8 12H16L12 16Z" fill="white"/>
+                <path d="M12 8L16 12H8L12 8Z" fill="white"/>
               </svg>
             </div>
           </motion.div>

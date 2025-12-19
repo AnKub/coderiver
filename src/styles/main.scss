@@ -1,7 +1,7 @@
-@import './variables';
-@import './mixins';
-@import './base';
+@use './variables' as *;
+@use './mixins' as *;
+@use './base' as *;
 
-@import '../components/Header/Header';
-@import '../components/Hero/Hero';
-@import '../components/Particles/Particles';
+@use '../components/Header/Header' as *;
+@use '../components/Hero/Hero' as *;
+@use '../components/Particles/Particles' as *;

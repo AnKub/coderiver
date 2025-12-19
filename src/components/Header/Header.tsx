@@ -72,7 +72,7 @@ const Header = () => {
       <div className="container">
         <div className="header__content">
           <div className="header__logo">
-            <img src="/background/logo.png" alt="Logo" className="header__logo-image" />
+            <img src="/background/Logo.png" alt="Logo" className="header__logo-image" />
           </div>
           
           <nav className="header__nav">
