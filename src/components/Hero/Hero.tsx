@@ -67,60 +67,45 @@ const Hero = () => {
   
   return (
     <section ref={heroRef} className="hero">
+      <div className="hero__background">
+        <img src="/background/Юніон.png" alt="" className="hero__background-union" />
+        <img src="/background/Дата.png" alt="" className="hero__background-data" />
+      </div>
       <div className="container">
         <div className="hero__content">
-          <motion.div 
-            className="hero__logo"
-            variants={logoVariants}
+          <motion.button 
+            className="hero__button"
+            variants={textVariants}
             initial="hidden"
             animate={isVisible ? "visible" : "hidden"}
+            custom={0.2}
           >
-            <div className="hero__logo-symbol">⚡</div>
-          </motion.div>
+            Start today!
+          </motion.button>
           
-          <div className="hero__text">
-            <motion.h1 
-              className="hero__title"
-              variants={textVariants}
-              initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
-              custom={0.4}
-            >
-              Creative Solutions
-            </motion.h1>
-            
-            <motion.h2 
-              className="hero__subtitle"
-              variants={textVariants}
-              initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
-              custom={0.6}
-            >
-              for Your Business
-            </motion.h2>
-            
-            <motion.p 
-              className="hero__description"
-              variants={textVariants}
-              initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
-              custom={0.8}
-            >
-              We create modern web solutions that impress and deliver results
-            </motion.p>
-            
-            <motion.div 
-              className="hero__cta"
-              variants={textVariants}
-              initial="hidden"
-              animate={isVisible ? "visible" : "hidden"}
-              custom={1.0}
-            >
-              <button className="hero__button">
-                Start Project
-              </button>
-            </motion.div>
-          </div>
+          <motion.h1 
+            className="hero__title"
+            variants={textVariants}
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+            custom={0.4}
+          >
+            Building the future of medicine with AI
+          </motion.h1>
+          
+          <motion.div 
+            className="hero__arrow"
+            variants={textVariants}
+            initial="hidden"
+            animate={isVisible ? "visible" : "hidden"}
+            custom={0.8}
+          >
+            <div className="hero__arrow-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 16L8 12H16L12 16Z" fill="white"/>
+              </svg>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

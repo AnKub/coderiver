@@ -65,14 +65,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  const navItems = ['Home', 'About', 'Services', 'Contact'];
+  const navItems = ['Solutions', 'Technology', 'About', 'Careers', 'Resources', 'Contact'];
   
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <div className="container">
         <div className="header__content">
           <div className="header__logo">
-            <ScrambleText text="CodeRiver" className="header__logo-text" />
+            <img src="/background/logo.png" alt="Logo" className="header__logo-image" />
           </div>
           
           <nav className="header__nav">

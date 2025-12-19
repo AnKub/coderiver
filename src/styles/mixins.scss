@@ -54,7 +54,11 @@
 }
 
 @mixin container {
-  max-width: $container-max-width;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 20px;
+  
+  @include mobile {
+    padding: 0 15px;
+  }
 }

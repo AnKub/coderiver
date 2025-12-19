@@ -13,7 +13,7 @@ interface Particle {
 
 const Particles = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const particlesRef = useRef<Particle[]>([]);
   

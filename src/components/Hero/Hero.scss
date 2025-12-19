@@ -2,6 +2,245 @@
 @import '../../styles/mixins';
 
 .hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  &__union {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  
+  &__data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+  }
+  
+  &__content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    
+    @include mobile {
+      gap: 30px;
+      padding: 0 20px;
+    }
+  }
+  
+  &__button {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: all $transition-base;
+    
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    @include mobile {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+  }
+  
+  &__title {
+    width: 914px;
+    max-width: 100%;
+    height: 176px;
+    font-size: clamp(32px, 8vw, 72px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    @include mobile {
+      width: 100%;
+      height: auto;
+      min-height: 120px;
+    }
+  }
+  
+  &__arrow {
+    &-circle {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all $transition-base;
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      
+      svg {
+        width: 16px;
+        height: 16px;
+        transform: rotate(180deg);
+      }
+      
+      @include mobile {
+        width: 32px;
+        height: 32px;
+        
+        svg {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: $header-height;
+  background-color: #000;
+  overflow: hidden;
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    
+    &-union {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    &-data {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  &__content {
+    text-align: center;
+    color: #fff;
+  }
+  
+  &__logo {
+    margin-bottom: 2rem;
+    
+    &-symbol {
+      font-size: 4rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  &__subtitle {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  &__description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  &__button {
+    background: $accent-color;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all $transition-base;
+    
+    &:hover {
+      background: darken($accent-color, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+    }
+  }
+  
+  @include mobile {
+    padding: $header-height 1rem 0;
+    
+    &__background-data {
+      max-width: 95%;
+    }
+  }
+}
+
+.hero {
   min-height: 100vh;
   @include flex-center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
