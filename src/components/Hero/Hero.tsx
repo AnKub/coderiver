@@ -64,7 +64,7 @@ const Hero = () => {
             animate={isVisible ? "visible" : "hidden"}
             custom={0.2}
           >
-            Start today!
+            START TODAY!
           </motion.button>
           
           <motion.h1 
